@@ -30,8 +30,11 @@
             <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action"
               >Dashboard</a
             >
-            <a href="" class="list-group-item list-group-item-action"
+            <a href="{{ route('product.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product')) ? 'active' : '' }}"
               >Products</a
+            >
+            <a href="{{ route('product-gallery.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/product-gallery*')) ? 'active' : '' }}"
+              >Gallery</a
             >
             <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/category*')) ? 'active' : '' }}"
               >Categories</a
@@ -42,9 +45,12 @@
             <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action {{ (request()->is('admin/user*')) ? 'active' : '' }}"
               >Users</a
             >
-            <a href="" class="list-group-item list-group-item-action"
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="list-group-item list-group-item-action"
               >Sign Out</a
             >
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
           </div>
         </div>
         <!-- Page Content -->
@@ -87,7 +93,7 @@
                       Hi, Angga
                     </a>
                     <div class="dropdown-menu">
-                      <a href="" class="dropdown-item">Logout</a>
+                      <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"  class="dropdown-item">Logout</a>
                     </div>
                   </li>
                 </ul>
