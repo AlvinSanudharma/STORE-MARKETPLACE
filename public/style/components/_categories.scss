@@ -1,20 +1,35 @@
 .component-categories {
-  background: #f4f4f4;
-  border-radius: 8px;
-  padding: 30px 30px 10px 30px;
-  margin-bottom: 20px;
-  transition: all 0.2s ease-in-out;
+    background: #f4f4f4;
+    border-radius: 8px;
+    padding: 30px 30px 10px 30px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-    text-decoration: none;
-  }
+    &:hover {
+        transform: scale(1.05);
+        text-decoration: none;
+    }
 
-  .categories-text {
-    font-size: 18px;
-    text-align: center;
-    color: #0c0d36;
-    font-weight: 400;
-    margin-top: 12px;
-  }
+    .categories-image {
+        background-color: #e4e4e4;
+        border-radius: 100%;
+        width: 76px;
+        height: 76px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .img-wrapper {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .categories-text {
+        font-size: 18px;
+        text-align: center;
+        color: #0c0d36;
+        font-weight: 400;
+        margin-top: 12px;
+    }
 }
